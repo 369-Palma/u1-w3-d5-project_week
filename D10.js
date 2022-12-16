@@ -168,9 +168,7 @@ console.log(isThisAnEmail("palma.dmxks92@gmail.it"));
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
 console.log("########### Esercizio 7 #################");
-const today = Date.now();
-const whatDayIsIt = new Date(today);
-console.log(whatDayIsIt);
+
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
   Deve invocare la precedente funzione dice() il numero di volte specificato nel parametro, e deve tornare un oggetto contenente una proprietà "sum":
@@ -183,8 +181,37 @@ console.log(whatDayIsIt);
       values: [3, 3, 4]
   }
 */
-console.log("########### Esercizio 8 #################");
+/* console.log("########### Esercizio 8 #################");
 
+function rollTheDices(num){
+  return 
+  for(let i=0; i=num; i++){
+    callback
+  }
+  const oggettoNum = {}
+
+}
+console.log(rollTheDices(3))
+
+const rollTheDices = num =>{ 
+  const callback =rollTheDices()
+  for(let i=num; i<array.length; i++){
+    const sum=[]
+  }
+
+
+} */
+
+const objNum= {}
+function rollTheDices (n){
+  let i = 1
+  while(i !== n){
+    const sum = rollTheDices.value =+
+    i++
+  }
+  return sum
+}
+console.log(rollTheDices(2))
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
@@ -194,7 +221,9 @@ console.log("########### Esercizio 9 #################");
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
 console.log("########### Esercizio 10 #################");
+const isTodayMyBirthday = data => ( )
 
+}
 // Arrays & Oggetti
 
 // NOTA: l'array "movies" usato in alcuni esercizi è definito alla fine di questo file
