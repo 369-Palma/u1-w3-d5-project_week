@@ -21,16 +21,22 @@ console.log(sum(10, 20));
 */
 console.log("########### Esercizio B #################");
 
-/* function random(x) {
-  if (x > 0 && x < 20) {
-    return x;
-  } else {
-    x = Math.floor(Math.floor(Math.random()*100));
-    return random();
-  }
+let random = Math.floor(Math.random() * 100);
+while (random === random > 0 || random < 20) {
+  random = Math.floor(Math.random() * 100);
+  console.log(random);
 }
 
-console.log(random(30)); */
+/*  if (x > 0 && x < 20) {
+    return x;
+  }
+  /* if (x > 0 && x < 20) {
+    return x;
+  } else {
+    return random(x);
+  } */
+
+//console.log("il numero random è:", random);
 
 /* ESERCIZIO C
   Crea una variabile chiamata "me" e assegnaci un oggetto contenente le seguenti proprietà: name = il tuo nome, surname = il tuo cognome, age = la tua età.
@@ -89,6 +95,14 @@ console.log(dice("a"));
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
 console.log("########### Esercizio 2 #################");
+function whoIsBigger(x, y) {
+  if (x > y) {
+    return x;
+  } else {
+    return y;
+  }
+}
+console.log("il numero più grande è:", whoIsBigger(38, 40));
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
