@@ -17,11 +17,26 @@ console.log(sum(10, 20));
 /* ESERCIZIO B
   Crea una variabile chiamata "random" e assegnaci un numero casuale tra 0 e 20 (deve essere generato dinamicamente a ogni esecuzione).
 */
+/* function random(x) {
+  if (x > 0 && x < 20) {
+    return x;
+  } else {
+    x = Math.floor(Math.floor(Math.random()));
+    return random();
+  }
+}
+
+console.log(random(30)); */
 
 /* ESERCIZIO C
   Crea una variabile chiamata "me" e assegnaci un oggetto contenente le seguenti proprietà: name = il tuo nome, surname = il tuo cognome, age = la tua età.
 */
-
+const me = {
+  name: "Palma",
+  surname: "Iacobelli",
+  age: "30",
+};
+console.log(me);
 /* ESERCIZIO D
   Crea del codice per rimuovere programmaticamente la proprietà "age" dall'oggetto precedentemente creato.
 */
