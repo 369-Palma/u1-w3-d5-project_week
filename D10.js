@@ -138,11 +138,31 @@ console.log(deleteOne("Supercalifragilistichespiralidoso", true));
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
 console.log("########### Esercizio 5 #################");
+/* function onlyLetters(stringa) 
 
+
+conosole.log(onlyLetters("I have 4 dogs"));
+ */
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 console.log("########### Esercizio 6 #################");
+
+function isThisAnEmail(stringa) {
+  if (stringa == "") {
+    console.log("Devi indicare un indirizzo email");
+    return false;
+  }
+
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(stringa)) {
+    console.log("L'indirizzo email che hai inserito e' valido");
+    return true;
+  }
+}
+
+console.log(isThisAnEmail("palma.dmxks.eeesa.boh"));
+console.log(isThisAnEmail(""));
+console.log(isThisAnEmail("palma.dmxks92@gmail.it"));
 
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
