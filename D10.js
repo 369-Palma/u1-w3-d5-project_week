@@ -110,6 +110,11 @@ console.log("il numero più grande è:", whoIsBigger(38, 40));
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
 console.log("########### Esercizio 3 #################");
+function splitMe(stringa) {
+  let arrayString = stringa.split(" ");
+  return arrayString;
+}
+console.log(splitMe("I nailed this exercise"));
 
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
