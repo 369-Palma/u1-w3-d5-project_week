@@ -377,6 +377,12 @@ console.log("il film più recente è:", newestMovie);
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
 console.log("########### Esercizio 13 #################");
+const countMovies = (array) => {
+  return array.filter((element) => {
+    return element.Type === "movie";
+  }).length;
+};
+console.log(countMovies(movies));
 
 /* ESERCIZIO 14
   Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
