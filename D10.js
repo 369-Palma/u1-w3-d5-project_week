@@ -63,6 +63,8 @@ console.log(me);
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".
 */
 console.log("########### Esercizio F #################");
+me.skills.push("Javascript");
+console.log(me);
 
 /* ESERCIZIO G
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
