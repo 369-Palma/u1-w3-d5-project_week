@@ -484,22 +484,21 @@ console.log(removeIndex(1));
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
-console.log("########### Esercizio 20 #################");
-
-const contenitore = document.getElementsById("container");
-
+const contenitore = () => {
+  document.getElementsById("container");
+};
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
-console.log("########### Esercizio 21 #################");
 
-const tds = document.getElementsByTagName("td");
+const tds = () => {
+  document.getElementsByTagName("td");
+};
 //oppure: document.querySelectorAll("td")
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
-console.log("########### Esercizio 22 #################");
 
 const stampainconsole = () => {
   const testoTd = document.querySelectorAll(td);
@@ -509,7 +508,6 @@ const stampainconsole = () => {
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
-console.log("########### Esercizio 23 #################");
 const sfondo = () => {
   return (document.getElementsByName("a").style.backgroundColor = rgb(
     255,
@@ -521,21 +519,24 @@ const sfondo = () => {
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
-console.log("########### Esercizio 24 #################");
-const nuovoElemento = document.createElement(li);
-nuovoElemento.innerText = "bla bla";
-const padre = document.getElementById("myList");
-padre.appendChild(il);
 
+const nuovoElemento = () => {
+  document.createElement(li);
+  nuovoElemento.innerText = "bla bla";
+  const padre = document.getElementById("myList");
+  padre.appendChild(il);
+};
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
-console.log("########### Esercizio 25 #################");
+const svuotalista = () => {
+  const listaspesa = document.getElementById("myList");
+  listaspesa.value = "";
+};
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
-console.log("########### Esercizio 26 #################");
 const aggiungiTest = () => {
   const Alltr = document.querySelectorAll(tr);
   Alltr.forEach((tr) => tr.ClassList.add("test"));
