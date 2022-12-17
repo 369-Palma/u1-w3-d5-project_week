@@ -217,9 +217,23 @@ const Date.getMonth() */
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
 console.log("########### Esercizio 11 #################");
-function eleteProp(oggetto, stringa) {
-  const newObject = {};
+const deleteProp = (oggetto, stringa) => {
+  for (let i = 0; i < oggetto.length; i++) {
+    if (i === stringa) {
+      delete oggetto;
+      let newObj = oggetto;
+      return newObj;
+    }
+  }
+};
+
+console.log(deleteProp(me, "Iacobelli"));
+
+/* });
+ if(oggetto === stringa)
 }
+  const newObject = {};
+} */
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
@@ -423,11 +437,47 @@ console.log(searchByTitle("the lord of the rings"));
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
 console.log("########### Esercizio 18 #################");
+const searchAndDivide = (stringa) => {
+  const Obj = {};
+  const match = [0];
+  const unmatch = [0];
+  for (let i = 0; i < movies.length; i++) {
+    if (movies[i].Title === stringa) {
+      match.push(movies[i]);
+    } else {
+      unmatch.push(movies[i]);
+    }
+  }
+  return (Obj = match + unmatch);
+};
+console.log("Signore");
 
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
 console.log("########### Esercizio 19 #################");
+/* const removeIndex = (num) => {
+  let nuovoArray = [];
+  for (let i = 0; i < movies.length; i++) {
+    if (i !== num) {
+      nuovoArray.push(movies);
+    } else {
+      movies.splice(num, 1);
+    }
+
+    return nuovoArray;
+  }
+}; */
+const removeIndex = (num) => {
+  const newArray = [];
+  for (let i = 0; i < movies.length; i++) {
+    if (i !== num) {
+      newArray.push(movies.filter((e) => e !== num));
+    }
+    return newArray;
+  }
+};
+console.log(removeIndex(1));
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
@@ -435,30 +485,62 @@ console.log("########### Esercizio 19 #################");
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 console.log("########### Esercizio 20 #################");
+
+const contenitore = document.getElementsById("container");
+
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
 console.log("########### Esercizio 21 #################");
+
+const tds = document.getElementsByTagName("td");
+//oppure: document.querySelectorAll("td")
+
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
 console.log("########### Esercizio 22 #################");
+
+const stampainconsole = () => {
+  const testoTd = document.querySelectorAll(td);
+  testoTd.forEach((td) => console.log(td));
+};
+
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 console.log("########### Esercizio 23 #################");
+const sfondo = () => {
+  return (document.getElementsByName("a").style.backgroundColor = rgb(
+    255,
+    0,
+    0
+  )); //oppure #FF0000
+};
+
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 console.log("########### Esercizio 24 #################");
+const nuovoElemento = document.createElement(li);
+nuovoElemento.innerText = "bla bla";
+const padre = document.getElementById("myList");
+padre.appendChild(il);
+
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 console.log("########### Esercizio 25 #################");
+
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
 console.log("########### Esercizio 26 #################");
+const aggiungiTest = () => {
+  const Alltr = document.querySelectorAll(tr);
+  Alltr.forEach((tr) => tr.ClassList.add("test"));
+};
+
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
