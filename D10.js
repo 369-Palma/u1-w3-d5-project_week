@@ -85,11 +85,18 @@ console.log(me);
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
 console.log("########### Esercizio 1 #################");
-function dice(x) {
+/* function dice(x) {
   let random = Math.floor(Math.random() * 100);
   return random;
 }
-console.log(dice("a"));
+console.log(dice("a")); */
+
+function dice(min, max) {
+  min = 1;
+  max = 6;
+  return Math.floor(Math.random() * (max - min) + min);
+}
+console.log(dice(8));
 
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
@@ -138,11 +145,11 @@ console.log(deleteOne("Supercalifragilistichespiralidoso", true));
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
 console.log("########### Esercizio 5 #################");
-/* function onlyLetters(stringa) 
+function onlyLetters(stringa) {
+  return stringa.replace(/[^a-zA-Z]+/g, "");
+}
+console.log(onlyLetters("I have 4 dogs"));
 
-
-conosole.log(onlyLetters("I have 4 dogs"));
- */
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
