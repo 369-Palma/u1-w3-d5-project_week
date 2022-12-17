@@ -189,12 +189,12 @@ console.log("########### Esercizio 7 #################");
   }
 */
 console.log("########### Esercizio 8 #################");
-function rollTheDices(n) {
+/* function rollTheDices(n) {
   forEach(n);
   fleshbak.dice(dice);
 
   return sum;
-}
+} */
 
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
@@ -204,8 +204,8 @@ console.log("########### Esercizio 9 #################");
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
-/* console.log("########### Esercizio 10 #################");
-const isTodayMyBirthday = data => ( )
+console.log("########### Esercizio 10 #################");
+/* const isTodayMyBirthday = data => ( )
 const Date.getMonth() */
 
 // Arrays & Oggetti
@@ -217,7 +217,9 @@ const Date.getMonth() */
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
 console.log("########### Esercizio 11 #################");
-
+function eleteProp(oggetto, stringa) {
+  const newObject = {};
+}
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
@@ -339,17 +341,19 @@ const movies = [
 ];
 
 console.log("########### Esercizio 12 #################");
-let arrayAnni = movies.map((element) => element.Year);
-const newestMovie = (arrayAnni) => {
-  let newest = arrayAnni[0];
-  arrayAnni.forEach((element) => {
-    if (parseInt(newest.Year > parseInt(element.Year))) {
-      newest = element;
+
+const newestMovie = (array) => {
+  let result = array[0];
+  array.forEach((film) => {
+    if (parseInt(film.Year) > parseInt(result.Year)) {
+      result = film;
     }
   });
-  return newest;
+
+  return result;
 };
-console.log("il film più recente è:", newestMovie);
+
+console.log(newestMovie(movies));
 
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
@@ -366,17 +370,49 @@ console.log(countMovies(movies));
   Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
 */
 console.log("########### Esercizio 14 #################");
+/* const onlyTheYears = (array) => {
+  return array
+    .filter((element) => {
+      return element === movies.Year;
+    })
+    .push(onlyTheYears());
+};
 
+console.log(onlyTheYears); */
+/* function onlyTheYears (array){
+  let newArray=array.map(film) => film.Year
+return newArray}
+console.log(onlyTheYears) */
+/*const onlyTheYears = movies.filter((movies) => {
+
+  return movies.Year;
+});
+
+console.log(onlyTheYears);
+ */
 /* ESERCIZIO 15
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
 console.log("########### Esercizio 15 #################");
+const onlyInLastMillennium = (array) => {
+  return array.filter((element) => {
+    return element.Year < "2000";
+  });
+};
+console.log(onlyInLastMillennium);
 
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
 console.log("########### Esercizio 16 #################");
+const film = parseInt(movies.Year);
+console.log(film);
+/* const sumAllTheYears = film.reduce((accumulatore, elemento) => {
+  return accumulatore + elemento;
+}, 0); */
 
+/* console.log(sumAllTheYears);
+ */
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
@@ -398,31 +434,31 @@ console.log("########### Esercizio 19 #################");
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
-
+console.log("########### Esercizio 20 #################");
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
-
+console.log("########### Esercizio 21 #################");
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
-
+console.log("########### Esercizio 22 #################");
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
-
+console.log("########### Esercizio 23 #################");
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
-
+console.log("########### Esercizio 24 #################");
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
-
+console.log("########### Esercizio 25 #################");
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
-
+console.log("########### Esercizio 26 #################");
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
