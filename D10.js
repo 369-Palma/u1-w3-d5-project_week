@@ -413,12 +413,11 @@ const searchByTitle = (stringa) => {
     if (movies[i].Title.toLowerCase() === stringa.toLowerCase()) {
       const FilmCercato = movies[i];
       return FilmCercato;
-    } else {
-      console.log("Questo film non c'è");
     }
   }
 };
 console.log(searchByTitle("the lord of the rings"));
+
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
