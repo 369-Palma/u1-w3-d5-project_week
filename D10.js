@@ -185,36 +185,17 @@ console.log("########### Esercizio 7 #################");
 */
 
 console.log("########### Esercizio 8 #################");
-/* const rollTheDices = (num) => {
-  const oggetto = { sum };
-  const values = [0];
-  for (let i = 0; i === num; i++) {
-    //values[i]=dice()
-    values.push(dice(10))();
-  }
-  return values;
-}; */
+const oggetto = { somma: 0, values: [] };
 function rollTheDices(num) {
-  //const oggetto = { sum };
-  let values = [];
+  let risultato;
   for (let i = 0; i < num; i++) {
-    //values[i] = dice();
-    let risultato = dice();
-    values.push(risultato);
-    console.log(values[i]);
+    risultato = dice();
+    oggetto.values.push(risultato);
+    oggetto.somma += risultato;
   }
-  return values;
+  return oggetto;
 }
-//console.log(values);
-rollTheDices(8);
 console.log(rollTheDices(8));
-
-/* function rollTheDices(n) {
-  forEach(n);
-  fleshbak.dice(dice);
-
-  return sum;
-} */
 
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
