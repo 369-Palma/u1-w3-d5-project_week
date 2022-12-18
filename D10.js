@@ -85,11 +85,6 @@ console.log(me);
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
 console.log("########### Esercizio 1 #################");
-/* function dice(x) {
-  let random = Math.floor(Math.random() * 100);
-  return random;
-}
-console.log(dice("a")); */
 
 function dice(min, max) {
   min = 1;
@@ -188,7 +183,32 @@ console.log("########### Esercizio 7 #################");
       values: [3, 3, 4]
   }
 */
+
 console.log("########### Esercizio 8 #################");
+/* const rollTheDices = (num) => {
+  const oggetto = { sum };
+  const values = [0];
+  for (let i = 0; i === num; i++) {
+    //values[i]=dice()
+    values.push(dice(10))();
+  }
+  return values;
+}; */
+function rollTheDices(num) {
+  //const oggetto = { sum };
+  let values = [];
+  for (let i = 0; i < num; i++) {
+    //values[i] = dice();
+    let risultato = dice();
+    values.push(risultato);
+    console.log(values[i]);
+  }
+  return values;
+}
+//console.log(values);
+rollTheDices(8);
+console.log(rollTheDices(8));
+
 /* function rollTheDices(n) {
   forEach(n);
   fleshbak.dice(dice);
