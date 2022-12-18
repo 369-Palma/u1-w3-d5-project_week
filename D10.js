@@ -241,23 +241,18 @@ console.log(isTodayMyBirthday(day));
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
 console.log("########### Esercizio 11 #################");
+console.log(me);
 const deleteProp = (oggetto, stringa) => {
-  for (let i = 0; i < oggetto.length; i++) {
-    if (i === stringa) {
-      delete oggetto;
-      let newObj = oggetto;
-      return newObj;
+  for (let i = 0; i < me.length; i++) {
+    if (me.find() === stringa) {
+      delete me.stringa;
     }
   }
+  let newObj = oggetto;
+  return newObj;
 };
+console.log(deleteProp(me, "name"));
 
-console.log(deleteProp(me, "Iacobelli"));
-
-/* });
- if(oggetto === stringa)
-}
-  const newObject = {};
-} */
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
