@@ -171,6 +171,13 @@ console.log(isThisAnEmail("palma.dmxks92@gmail.it"));
 */
 console.log("########### Esercizio 7 #################");
 
+function whatDayIsIt(date) {
+  let days = ["DOM", "LUN", "MAR", "MER", "GIO", "VEN", "SAB"];
+  return days[date.getDay()];
+}
+let date = new Date(2022, 0, 3); // 3 Gen 2014
+console.log(whatDayIsIt(date));
+
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
   Deve invocare la precedente funzione dice() il numero di volte specificato nel parametro, e deve tornare un oggetto contenente una proprietà "sum":
@@ -242,9 +249,15 @@ console.log(isTodayMyBirthday(day));
 */
 console.log("########### Esercizio 11 #################");
 console.log(me);
+/* const pippo = "name";
+console.log(me[1]);
+const stringa = "name";
+let presente = stringa in me;
+console.log(presente); */
+
 const deleteProp = (oggetto, stringa) => {
   for (let i = 0; i < me.length; i++) {
-    if (me.find() === stringa) {
+    if (stringa in me) {
       delete me.stringa;
     }
   }
