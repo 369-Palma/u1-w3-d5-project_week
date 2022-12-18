@@ -201,13 +201,36 @@ console.log(rollTheDices(8));
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
 console.log("########### Esercizio 9 #################");
+/* 
+let oggi = new Date("11/18/2022");
+let inizio = new Date();
+
+const howManyDays = (oggi, inizio) => {
+  let differenza = oggi.getTime() - inizio.getTime();
+  let risultato = Math.ceil(differenza / (1000 * 3600 * 24));
+  return risultato;
+};
+
+console.log(howManyDays("oggi, inizio")); */
 
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
 console.log("########### Esercizio 10 #################");
-/* const isTodayMyBirthday = data => ( )
-const Date.getMonth() */
+
+const day = new Date();
+const isTodayMyBirthday = (data) => {
+  if (
+    data.getDate(day) === 18 &&
+    data.getMonth(day) === 11 &&
+    data.getFullYear(day) === 2022
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+};
+console.log(isTodayMyBirthday(day));
 
 // Arrays & Oggetti
 
