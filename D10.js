@@ -495,26 +495,15 @@ console.log(trovato);
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
 console.log("########### Esercizio 19 #################");
-/* const removeIndex = (num) => {
-  let nuovoArray = [];
-  for (let i = 0; i < movies.length; i++) {
-    if (i !== num) {
-      nuovoArray.push(movies);
-    } else {
-      movies.splice(num, 1);
-    }
 
-    return nuovoArray;
-  }
-}; */
+const newArray = [];
 const removeIndex = (num) => {
-  const newArray = [];
   for (let i = 0; i < movies.length; i++) {
     if (i !== num) {
-      newArray.push(movies.filter((e) => e !== num));
+      newArray.push(movies[i]);
     }
-    return newArray;
   }
+  return newArray;
 };
 console.log(removeIndex(1));
 
