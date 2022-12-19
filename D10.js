@@ -469,20 +469,27 @@ console.log(searchByTitle("the lord of the rings"));
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
 console.log("########### Esercizio 18 #################");
+
+let Obj = {
+  match: [],
+  unmatch: [],
+};
 const searchAndDivide = (stringa) => {
-  const Obj = {};
-  const match = [0];
-  const unmatch = [0];
   for (let i = 0; i < movies.length; i++) {
-    if (movies[i].Title === stringa) {
-      match.push(movies[i]);
+    let trovato = movies[i].Title.search(stringa);
+    if (trovato >= 0) {
+      Obj.match.push(movies[i].Title);
     } else {
-      unmatch.push(movies[i]);
+      Obj.unmatch.push(movies[i].Title);
     }
   }
-  return (Obj = match + unmatch);
+  return Obj;
 };
-console.log("Signore");
+console.log(searchAndDivide("Lord"));
+
+let stringa = "Lord";
+let trovato = movies[0].Title.search(stringa);
+console.log(trovato);
 
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
