@@ -605,9 +605,9 @@ const isItPrime = (n) => {
   primo = true;
   for (let i = 2; n < 1; i++)
     if (n % i === 0) {
-      primo = false;
+      return false;
     }
-  return primo;
+  return true;
 };
 
 console.log(isItPrime(7));
