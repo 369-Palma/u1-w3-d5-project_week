@@ -599,6 +599,18 @@ const aggiungiTest = () => {
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+console.log("########### Esercizio 29 #################");
+let primo = true;
+const isItPrime = (n) => {
+  primo = true;
+  for (let i = 2; n < 1; i++)
+    if (n % i === 0) {
+      primo = false;
+    }
+  return primo;
+};
+
+console.log(isItPrime(7));
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 
